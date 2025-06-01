@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -77,4 +79,9 @@ dependencies {
     implementation("com.facebook.android:facebook-login:16.3.0")
     implementation("com.facebook.android:facebook-android-sdk:16.3.0")
 
+    implementation(libs.hilt.core)
+    kapt(libs.hilt.compiler)
+
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.androidx.hilt.compiler)
 }
