@@ -1,6 +1,8 @@
 package com.durranitech.authentication
 
 import android.app.Application
+import com.facebook.FacebookSdk
+import com.facebook.appevents.AppEventsLogger
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
@@ -10,5 +12,4 @@ class FacebookSignInApplication: Application() {
         FacebookSdk.sdkInitialize(applicationContext)
         AppEventsLogger.activateApp(this)
     }
-
 }
